@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+ *{
+     margin: 0;
+     padding: 0;
+ }
+ .clear{
+     content: '';
+     display: block;
+     clear: both;
+ }
+ .contaniner{
+     margin: 200px auto;
+     width: 25px;
+     height: 40px;
+     background: #95ec69;
+     border-radius: 5px;
+     position: relative;
+ }
+ .wrapper{
+     width: 0px;
+     height: 0px;
+     position: absolute;
+     left: 3px;
+     top: 4px;
+     border-top: 15px solid transparent;
+     border-left: 30px solid #95ec69;
+     border-bottom: 15px solid transparent;
+ }
+ .contaniner p{
+    font-family: '微软雅黑';
+    font-size: 16px;
+    text-align: center;
+    width: 200px;
+    line-height: 40px;
+ }
+</style>
+<body>
+     <div class="contaniner">
+         <div class="wrapper">
+         </div>
+         <p></p>
+     </div>
+</body>
+</html>

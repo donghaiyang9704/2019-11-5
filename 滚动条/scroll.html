@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>autoScroll</title>
+</head>
+<style>
+    .parent {
+        width: 500px;
+        height: 800px;
+        margin: 0 auto;
+        background: #242424;
+        overflow-y: scroll;
+    }
+    /*设置的子盒子高度大于父盒子，产生溢出效果*/
+    .child {
+        height: auto;
+    }
+</style>
+<body>
+    <div id="parent" class="parent">
+        <div id="child1" class="child">
+           
+Appuploader是ios证书申请及上架辅助工具，软件在Windows、linux、Mac系统都能使用，秒申请证书、快速上传ipa，极大的方便没有Mac苹果电脑的iOS开发者！
+
+
+Appuploader官网：http://www.applicationloader.net/
+
+
+---------------------
+
+技术客服：728221481  交流Q群：827985058
+
+
+相关操作教程（下面教程包含了iOS证书申请步骤）
+---------------------
+
+iOS APP上架App Store详细教程-必看
+
+http://www.applicationloader.net/blog/zh/88.html
+
+
+iOS APP真机调试测试教程
+
+http://www.applicationloader.net/blog/zh/152.html
+
+
+iOS APP上架被拒重新提交审核教程
+
+http://www.applicationloader.net/blog/zh/1431.html
+
+
+iOS APP版本更新升级教程
+
+http://www.applicationloader.net/blog/zh/681.html
+
+
+未付费688个人免费开发账号真机调试测试教程
+
+http://www.applicationloader.net/blog/zh/1073.html
+
+
+AU使用常遇错误解决方案集合贴
+
+http://www.applicationloader.net/blog/zh/2105.html
+
+
+
+基础介绍篇
+
+----------------------
+Appuploader的安装介绍
+
+http://www.applicationloader.net/blog/zh/72.html
+
+
+Appuploader的激活介绍
+
+http://www.applicationloader.net/blog/zh/93.html
+
+
+iOS证书相关知识介绍
+
+http://www.applicationloader.net/blog/zh/2310.html
+
+
+苹果开发者账号申请介绍
+
+http://www.applicationloader.net/blog/zh/547.html
+
+
+上传IPA到App Store介绍
+
+http://www.applicationloader.net/blog/zh/1878.html
+
+
+        </div>
+        <div id="child2" class="child"></div>
+    </div>
+    <script type="text/javascript">
+        (function () {
+            var parent = document.getElementById('parent');
+            var child1 = document.getElementById('child1');
+            var child2 = document.getElementById('child2');
+            child2.innerHTML = child1.innerHTML;
+            setInterval(function () {
+               if(parent.scrollTop >= child1.scrollHeight) {
+                   parent.scrollTop = 0;
+               } else {
+                   parent.scrollTop++;
+               }
+            }, 30);
+        })()
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  li{
+    list-style: none;
+  }
+.container{
+  width: 800px;
+  height: 500px;
+  margin: 100px auto;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+.title{
+  height: 80px;
+  border:1px solid #ddd;
+
+}
+.title li{
+  list-style: none;
+  float: left;
+  width: 25%;
+  line-height: 80px;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
+  text-align: center;
+}
+.title li.col{
+  background: red;
+}
+.wrapper{
+  line-height: 420px;
+  height: 420px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.wrapper ul li{
+   display: none;
+}
+.wrapper ul li.active{
+    display: block;
+}
+
+</style>
+
+<body>
+  <div class="container">
+    <div class="title">
+      <ul>
+        <li class="col">web前端</li>
+        <li>php</li>
+        <li>java</li>
+        <li>go</li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <ul>
+        <li class="active">eb前端web前端web前端web前端web前端web前端web前端web前端web前端web前端web前端web前端</li>
+        <li>phpphpphpphpphpphpphpphpphpphpphpphpphpphpphpphpphpphpphpphp</li>
+        <li>javajavajavajavajavajavajavajavajavajavajavajavajavajavajava</li>
+        <li>gogogogogogogogogogogogogogogogogogo</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+        window.onload=function(){
+          var title=document.getElementsByClassName('title')[0];
+          var Otitle=title.getElementsByTagName('li');
+          var wrapper=document.getElementsByClassName('wrapper')[0];
+          var Owrapper=wrapper.getElementsByTagName('li');
+          for(var i=0;i<Otitle.length;i++){
+                Otitle[i].index=i
+                Otitle[i].onclick=function(){
+                for(var i=0;i<Otitle.length;i++){
+                  Otitle[i].className='';
+                  Owrapper[i].className=''
+                }
+                this.className='col';
+                Owrapper[this.index].className='active'
+                } 
+             
+          }
+        }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>性能优化</title>
+</head>
+<body>
+       <ul>
+       </ul>
+    <script>
+          var Oul =document.getElementsByTagName("ul")[0]
+    //     console.time('ok')
+    //    for(var i =0; i<10000;i++){
+    //      Oul.innerHTML+="<li>"+ i +"</li>"
+    //    }
+    //   console.timeEnd('ok')    
+         var arr =['前端','开发','学习','php','java','javascript']
+      console.time('ok')
+      var str=''
+       for(var i =0; i<10000;i++){
+        str+="<li>"+arr[i] +"</li>"
+       }
+       Oul.innerHTML=str
+      console.timeEnd('ok')
+    </script>
+</body>
+</html> 

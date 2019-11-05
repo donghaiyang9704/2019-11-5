@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+#box{
+    position: absolute;
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+</style>
+<body>
+   <div id="box"></div>
+   <script>
+    var box =document.getElementById('box')
+    document.onkeydown = function(e){
+		       console.log(e)
+              switch(e.keyCode){
+                case 37: //左
+                box.style.left=Math.max(0,box.offsetLeft-5)+"px";
+		 		break; 
+		 		case 40: //上
+		 		box.style.top=Math.max(0,box.offsetTop-1)+"px";
+		 		break;
+		 		case 39:  //右
+		 		box.style.left=Math.min(350,box.offsetLeft+5)+"px";
+		 		break;	
+		 		case 38:  //下
+		 		box.style.top=Math.min(350,box.offsetTop+1)+"px";
+		 		break;		 	
+              }
+    }
+   </script>
+</body>
+</html>
